@@ -6,5 +6,5 @@ def generate_random_string(length):
     rand_string = ''.join(random.choice(letters) for i in range(length))
     return rand_string
 
-with open("rand.txt", "w") as f:
+with open("./rand.txt", "w") as f:
     f.write(generate_random_string(2844))
