@@ -7,4 +7,4 @@ def generate_random_string(length):
     return rand_string
 
 with open("./rand.txt", "w") as f:
-    f.write(generate_random_string(2844))
+    f.write(generate_random_string(13000))
