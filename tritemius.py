@@ -6,7 +6,7 @@ for i in range(len(a)):
         data[i].append(k)
 
 for i in range(100):
-    with open("./data./raw_text/{0}.txt".format(i), "r") as in_:
+    with open("./data./raw_text./novel/{0}.txt".format(i), "r") as in_:
         text = in_.read()
     ans = ''
     counter = 0
@@ -17,5 +17,5 @@ for i in range(100):
         else:
             ans += text[j]
 
-    with open("./data./encrypted_text/{0}.txt".format(i), "w") as out_:
+    with open("./data./encrypted_text./tritemius./novel/{0}.txt".format(i), "w") as out_:
         out_.write(ans)
