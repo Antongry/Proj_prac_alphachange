@@ -1,6 +1,3 @@
-# coding= utf-8
-
-
 def find_pos(symbol, alphabet):
     for i in range(len(alphabet)):
         if alphabet[i] == symbol:
@@ -54,33 +51,3 @@ def visiner(s, key, side, alphabet):
         else:
             ans += s[i]
     return ans
-
-
-al = ''
-for i in range(ord('а'), ord('я')+1):
-    al += chr(i)
-    #print(al)
-
-#novel
-for i in range(100):
-    with open("./data./raw_text./novel/{0}.txt".format(i), "r") as in_:
-        text = in_.read()
-
-    with open("./data./encrypted_text./visiner./novel/{0}.txt".format(i), "w") as out_:
-        out_.write(visiner(text, "некий ключ", 1, al))
-
-#poem
-for i in range(100):
-    with open("./data./raw_text./poem/{0}.txt".format(i), "r") as in_:
-        text = in_.read()
-
-    with open("./data./encrypted_text./visiner./poem/{0}.txt".format(i), "w") as out_:
-        out_.write(visiner(text, "некий ключ", 1, al))
-
-#random
-for i in range(50):
-    with open("./data./raw_text./random/{0}.txt".format(i), "r") as in_:
-        text = in_.read()
-
-    with open("./data./encrypted_text./visiner./random/{0}.txt".format(i), "w") as out_:
-        out_.write(visiner(text, "некий ключ", 1, al))
