@@ -1,34 +1,30 @@
 import matplotlib.pyplot as plt
 
-def mkgraph(raw, enc, n, fname, e=1):
+def mkgraph(e, adress, n, fname):
     a = ''
     b = 'ёйцукенгшщзхъфывапролджэячсмитьбю'
-    ch_raw = [0] * 33
-    ch_enc = [0] * 33
+    ch = [0] * 33
 
     for i in sorted(b):
         a += i
 
     for i in range(n): #diapazon textov
-        with open("./data./encrypted_text" + enc + "/{0}.txt".format(i), "r") as f:
-            text = f.read()
-        with open("./data./raw_text" + raw + "/{0}.txt".format(i), "r") as f1:
-            text1 = f1.read()
+        if e:
+            with open("./data./encrypted_text" + adress + "/{0}.txt".format(i), "r") as f:
+                text = f.read()
+        else:
+            with open("./data./raw_text" + adress + "/{0}.txt".format(i), "r") as f:
+                text = f.read()
 
         for j in range(len(a)):
-            chance_raw = text1.count(a[j])/len(text1)
-            chance_enc = text.count(a[j])/len(text)
-            ch_raw[j] += chance_raw
-            ch_enc[j] += chance_enc
+            chance = text.count(a[j])/len(text)
+            ch[j] += chance
 
     fig, ax = plt.subplots()
 
     for i in range(33):
         x = a[i]
-        if e:
-            y = ch_enc[i] / n   # encrypt or raw
-        else:
-            y = ch_raw[i] / n
+        y = ch[i] / n
 
         ax.bar(x, y)
 
@@ -41,13 +37,13 @@ def mkgraph(raw, enc, n, fname, e=1):
     #print(fname)
 
 
-mkgraph("./novel", "./visiner./novel", 100, "novel_visiner.png")
-mkgraph("./poem", "./visiner./poem", 100, "poem_visiner.png")
-mkgraph("./random", "./visiner./random", 50, "random_visiner.png")
-mkgraph("./novel", "./tritemius./novel", 100, "novel_tritemius.png")
-mkgraph("./poem", "./tritemius./poem", 100, "poem_tritemius.png")
-mkgraph("./random", "./tritemius./random", 50, "random_tritemius.png")
+mkgraph(1, "./visiner./novel", 100, "novel_visiner.png")
+mkgraph(1, "./visiner./poem", 100, "poem_visiner.png")
+mkgraph(1, "./visiner./random", 50, "random_visiner.png")
+mkgraph(1, "./tritemius./novel", 100, "novel_tritemius.png")
+mkgraph(1, "./tritemius./poem", 100, "poem_tritemius.png")
+mkgraph(1, "./tritemius./random", 50, "random_tritemius.png")
 
-mkgraph("./novel", "./visiner./novel", 100, "novel.png", 0)
-mkgraph("./poem", "./visiner./poem", 100, "poem.png", 0)
-mkgraph("./random", "./visiner./random", 50, "random.png", 0)
+mkgraph(0, "./novel", 100, "novel.png")
+mkgraph(0, "./poem", 100, "poem.png")
+mkgraph(0, "./random", 50, "random.png")
