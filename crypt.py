@@ -1,6 +1,7 @@
 #encoding=utf-8
 from tritemius import tritemius
 from visiner import visiner
+from visiner1 import visiner1
 
 al = ''
 for i in range(ord('а'), ord('я')+1):
@@ -62,3 +63,31 @@ for i in range(50):
 
     with open("./data./encrypted_text./visiner./random/{0}.txt".format(i), "w") as out_:
         out_.write(visiner(text, "некий ключ", 1, al))
+
+
+
+#visiner1
+
+#novel
+for i in range(100):
+    with open("./data./raw_text./novel/{0}.txt".format(i), "r") as in_:
+        text = in_.read()
+
+    with open("./data./encrypted_text./visiner1./novel/{0}.txt".format(i), "w") as out_:
+        out_.write(visiner1(text, "некий ключ", al))
+
+#poem
+for i in range(100):
+    with open("./data./raw_text./poem/{0}.txt".format(i), "r") as in_:
+        text = in_.read()
+
+    with open("./data./encrypted_text./visiner1./poem/{0}.txt".format(i), "w") as out_:
+        out_.write(visiner1(text, "некий ключ", al))
+
+#random
+for i in range(50):
+    with open("./data./raw_text./random/{0}.txt".format(i), "r") as in_:
+        text = in_.read()
+
+    with open("./data./encrypted_text./visiner1./random/{0}.txt".format(i), "w") as out_:
+        out_.write(visiner1(text, "некий ключ", al))
