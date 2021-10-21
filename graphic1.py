@@ -9,7 +9,7 @@ for i in sorted(b):
     a += i
 
 
-for i in range(0, 40): #diapazon textov
+for i in range(40): #diapazon textov
     with open("./encrypted_text/{0}.txt".format(i), "r") as f:
         text = f.read()
     with open("./raw_text/{0}.txt".format(i), "r") as f1:
@@ -23,16 +23,17 @@ for i in range(0, 40): #diapazon textov
 
 fig, ax = plt.subplots()
 
-a*=3
+a *= 2
 print(len(a))
-for i in range(33):
-    x = a[i]
-    y = ch_enc[i] / 40   # encrypt or raw
- #   ax.bar(x, y)
-  #  x = a[i * 2 + 1]
-  #  y = ch_raw[i // 2] / 40
-
-    ax.bar(x, y)
+for i in range(33 * 2):
+    if i % 2:
+        x = a[i // 2].upper()
+        y = ch_enc[i // 2] / 40   # encrypt or raw
+        ax.bar(x, y, color='lightsteelblue')
+    else:
+        x = a[i // 2]
+        y = ch_raw[i // 2] / 40
+        ax.bar(x, y, color='burlywood')
 
     ax.set_facecolor('seashell')
     fig.set_facecolor('floralwhite')
