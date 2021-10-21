@@ -33,7 +33,7 @@ def mkgraph(e, adress, n, fname):
         fig.set_figwidth(11)  # ширина Figure
         fig.set_figheight(6)  # высота Figure
 
-    plt.savefig("./data./statistics./graphic./" + fname)
+    plt.savefig("./data./statistics./graphic./stats/" + fname)
     #print(fname)
 
 
