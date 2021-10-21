@@ -1,14 +1,12 @@
-a = 'ёйцукенгшщзхъфывапролджэячсмитьбю'
-data = []
-for i in range(len(a)):
-    data.append([])
-    for k in (a[i::] + a[0:i]):
-        data[i].append(k)
+#a = 'ёйцукенгшщзхъфывапролджэячсмитьбю'
 
-key = 'можно использовать'
-for i in range(100):
-    with open("./raw_text/{0}.txt".format(i), "r") as in_:
-        text = in_.read()
+def visiner1(text ,key, a):
+    data = []
+    for i in range(len(a)):
+        data.append([])
+        for k in (a[i::] + a[0:i]):
+            data[i].append(k)
+
     ans = ''
     counter = 0
     for j in range(len(text)):
@@ -17,5 +15,4 @@ for i in range(100):
             counter += 1
         else:
             ans += text[j]
-    with open("./encrypted_text/{0}.txt".format(i), "w") as out_:
-        out_.write(ans)
+    return ans
