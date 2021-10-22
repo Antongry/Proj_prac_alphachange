@@ -1,7 +1,7 @@
 # 0 - 39: jane_eyre
 # 40 - 86: onegin
 # 87 - 99 random
-def mkstat(raw, enc, n, sfile)
+def mkstat(raw, enc, n):
     a = ''
     b = 'ёйцукенгшщзхъфывапролджэячсмитьбю'
     ch_raw = [0] * 33
@@ -27,18 +27,18 @@ def mkstat(raw, enc, n, sfile)
             data += '  {0}:       '.format(a[j])
             data += '{0}  |  {1}\n'.format("%.4f" % (chance_raw), "%.4f" % (chance_enc))
 
-        with open("./data./statistics./text./" + sfile + "/{0}.txt".format(i), "w") as f2:
+        with open("./data./statistics./text./" + enc + "/{0}.txt".format(i), "w") as f2:
             f2.write(data)
 
 
-mkstat("./novel", "./visiner./novel", 100, "novel_visiner.png")
-mkstat("./poem", "./visiner./poem", 100, "poem_visiner.png")
-mkstat("./random", "./visiner./random", 50, "random_visiner.png")
+mkstat("./novel", "./visiner./novel", 100)
+mkstat("./poem", "./visiner./poem", 100)
+mkstat("./random", "./visiner./random", 50)
 
-mkstat("./novel", "./tritemius./novel", 100, "novel_tritemius.png")
-mkstat("./poem", "./tritemius./poem", 100, "poem_tritemius.png")
-mkstat("./random", "./tritemius./random", 50, "random_tritemius.png")
+mkstat("./novel", "./tritemius./novel", 100)
+mkstat("./poem", "./tritemius./poem", 100)
+mkstat("./random", "./tritemius./random", 50)
 
-mkstat("./novel", "./visiner1./novel", 100, "novel_visiner1.png")
-mkstat("./poem", "./visiner1./poem", 100, "poem_visiner1.png")
-mkstat("./random", "./visiner1./random", 50, "random_visiner1.png")
+mkstat("./novel", "./visiner1./novel", 100)
+mkstat("./poem", "./visiner1./poem", 100)
+mkstat("./random", "./visiner1./random", 50)
