@@ -1,12 +1,5 @@
 #encoding=utf-8
 
-def find_pos(symbol, alphabet):
-    for i in range(len(alphabet)):
-        if alphabet[i] == symbol:
-            return i
-    return -1
-
-
 def visiner(s, key, side, alphabet):
     ans = ''
 
@@ -21,20 +14,19 @@ def visiner(s, key, side, alphabet):
     # convert key
     k = []
     for i in range(len(key)):
-        a = find_pos(key[i], alphabet)
+        a = alphabet.find(key[i])
         if a != -1:
             k.append(a)
     #print(k)
     # crypt
-    last_line = 0
-    line = last_line
+    line = 0
     j = 0  # current sdvig
 
     for i in range(len(s)):
-        a = find_pos(s[i], table[0])        #table[last_line)
+        a = table[0].find(s[i])        #table[last_line)
         if a != -1:
             # find line
-            line = last_line + side * k[j]
+            line += side * k[j]
 
             if line >= len(alphabet):
                 line -= len(alphabet)
@@ -49,7 +41,6 @@ def visiner(s, key, side, alphabet):
                 # samo koldynstvo
 
             ans += table[line][a]
-            last_line = line
         else:
             ans += s[i]
     return ans
