@@ -27,6 +27,7 @@ def visiner(s, key, side, alphabet):
         if a != -1:
             # find line
             line += side * k[j]
+            j+=1
 
             if line >= len(alphabet):
                 line -= len(alphabet)
@@ -44,3 +45,5 @@ def visiner(s, key, side, alphabet):
         else:
             ans += s[i]
     return ans
+
+#print(visiner("abacaba", "abc", 1, "abcdefghijklmnopqrstuvwxyz"))

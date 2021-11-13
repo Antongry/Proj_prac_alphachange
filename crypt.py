@@ -74,7 +74,7 @@ for i in range(100):
         text = in_.read()
 
     with open("./data./encrypted_text./visiner1./novel/{0}.txt".format(i), "w") as out_:
-        out_.write(visiner1(text, "некий ключ", al))
+        out_.write(visiner1(text, "некийключ", al))
 
 #poem
 for i in range(100):
@@ -82,7 +82,7 @@ for i in range(100):
         text = in_.read()
 
     with open("./data./encrypted_text./visiner1./poem/{0}.txt".format(i), "w") as out_:
-        out_.write(visiner1(text, "некий ключ", al))
+        out_.write(visiner1(text, "некийключ", al))
 
 #random
 for i in range(50):
@@ -90,4 +90,4 @@ for i in range(50):
         text = in_.read()
 
     with open("./data./encrypted_text./visiner1./random/{0}.txt".format(i), "w") as out_:
-        out_.write(visiner1(text, "некий ключ", al))
+        out_.write(visiner1(text, "некийключ", al))
