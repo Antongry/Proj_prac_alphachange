@@ -12,7 +12,7 @@ for i in range(ord('а'), ord('я')+1):
 #tritemius
 
 #novel
-for i in range(100):
+for i in range(200):
     with open("./data./raw_text./novel/{0}.txt".format(i), "r") as in_:
         text = in_.read()
 
@@ -41,7 +41,7 @@ for i in range(50):
 #visiner
 
 #novel
-for i in range(100):
+for i in range(200):
     with open("./data./raw_text./novel/{0}.txt".format(i), "r") as in_:
         text = in_.read()
 
@@ -69,7 +69,7 @@ for i in range(50):
 #visiner1
 
 #novel
-for i in range(100):
+for i in range(200):
     with open("./data./raw_text./novel/{0}.txt".format(i), "r") as in_:
         text = in_.read()
 

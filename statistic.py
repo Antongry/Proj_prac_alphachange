@@ -31,14 +31,14 @@ def mkstat(raw, enc, n):
             f2.write(data)
 
 
-mkstat("./novel", "./visiner./novel", 100)
+mkstat("./novel", "./visiner./novel", 200)
 mkstat("./poem", "./visiner./poem", 100)
 mkstat("./random", "./visiner./random", 50)
 
-mkstat("./novel", "./tritemius./novel", 100)
+mkstat("./novel", "./tritemius./novel", 200)
 mkstat("./poem", "./tritemius./poem", 100)
 mkstat("./random", "./tritemius./random", 50)
 
-mkstat("./novel", "./visiner1./novel", 100)
+mkstat("./novel", "./visiner1./novel", 200)
 mkstat("./poem", "./visiner1./poem", 100)
 mkstat("./random", "./visiner1./random", 50)

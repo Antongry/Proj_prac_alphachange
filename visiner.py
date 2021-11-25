@@ -26,7 +26,7 @@ def visiner(s, key, side, alphabet):
         a = table[0].find(s[i])        #table[last_line)
         if a != -1:
             # find line
-            line += side * k[j]
+            line = k[j] #+= side *
             j+=1
 
             if line >= len(alphabet):
@@ -46,4 +46,4 @@ def visiner(s, key, side, alphabet):
             ans += s[i]
     return ans
 
-#print(visiner("abacaba", "abc", 1, "abcdefghijklmnopqrstuvwxyz"))
+#print(visiner("pupa i lupa polucali", "chupa", 1, "abcdefghijklmnopqrstuvwxyz"))

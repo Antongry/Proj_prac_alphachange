@@ -16,3 +16,5 @@ def visiner1(text ,key, a):
         else:
             ans += text[j]
     return ans
+
+#print(visiner1("pupa i lupa polucali", "chupa", "abcdefghijklmnopqrstuvwxyz"))
