@@ -6,7 +6,9 @@ from visiner1 import visiner1
 al = ''
 for i in range(ord('а'), ord('я')+1):
     al += chr(i)
-    #print(al)
+    if chr(i) == 'е':
+        al += 'ё';
+#print(al)
 
 
 #tritemius

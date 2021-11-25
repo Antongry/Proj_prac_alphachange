@@ -88,20 +88,20 @@ def mkcmpgraph(raw, enc, n, fname):
     plt.savefig("./data./statistics./graphic./cmp_stats/" + fname)
     #plt.show()
 
-mkgraph("./novel", "./visiner./novel", 100, "novel_visiner.png")
+mkgraph("./novel", "./visiner./novel", 200, "novel_visiner.png")
 mkgraph("./poem", "./visiner./poem", 100, "poem_visiner.png")
 mkgraph("./random", "./visiner./random", 50, "random_visiner.png")
 
-mkgraph("./novel", "./tritemius./novel", 100, "novel_tritemius.png")
+mkgraph("./novel", "./tritemius./novel", 200, "novel_tritemius.png")
 mkgraph("./poem", "./tritemius./poem", 100, "poem_tritemius.png")
 mkgraph("./random", "./tritemius./random", 50, "random_tritemius.png")
 
-mkgraph("./novel", "./visiner1./novel", 100, "novel_visiner1.png")
+mkgraph("./novel", "./visiner1./novel", 200, "novel_visiner1.png")
 mkgraph("./poem", "./visiner1./poem", 100, "poem_visiner1.png")
 mkgraph("./random", "./visiner1./random", 50, "random_visiner1.png")
 
 #v vs v1
 
-mkcmpgraph("./visiner./novel", "./visiner1./novel", 100, "novel_visiner_cmp.png")
+mkcmpgraph("./visiner./novel", "./visiner1./novel", 200, "novel_visiner_cmp.png")
 mkcmpgraph("./visiner./poem", "./visiner1./poem", 100, "poem_visiner1_cmp.png")
 mkcmpgraph("./visiner./random", "./visiner1./random", 50, "random_visiner1_cmp.png")
