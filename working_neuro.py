@@ -1,3 +1,5 @@
+#encoding=utf-8
+
 import numpy as np
 
 
@@ -12,18 +14,18 @@ def nonlin(x, deriv=False):
 a = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 data = []
 data_1 = []
-for i in range(50):
-    with open("./poem/{0}.txt".format(i), "r", encoding="windows-1251") as f:
+for i in range(100):
+    with open("./data./raw_text./novel/{0}.txt".format(i), "r") as f:
         raw = f.read()
-    with open("./encrypted_text/{0}.txt".format(i), "r") as f1:
-        raw1 = f1.read()
+    with open("./data./encrypted_text./visiner./novel/{0}.txt".format(i), "r") as f1:
+        enc = f1.read()
     text = []
     text1 = []
     j = 0
     while len(text) != 33:
         if raw[j].lower() in a:
             text.append((ord(raw[j]) - 1072) / 33)
-            text1.append((ord(raw1[j]) - 1072) / 33)
+            text1.append((ord(enc[j]) - 1072) / 33)
         j += 1
     data_1.append(text1)
     data.append(text)
