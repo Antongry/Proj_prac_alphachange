@@ -23,10 +23,10 @@ def visiner(s, key, side, alphabet):
     j = 0  # current sdvig
 
     for i in range(len(s)):
-        a = table[0].find(s[i])        #table[last_line)
+        a = table[last_line].find(s[i])       
         if a != -1:
             # find line
-            line = k[j] #+= side *
+            line += side * k[j]
             j+=1
 
             if line >= len(alphabet):
